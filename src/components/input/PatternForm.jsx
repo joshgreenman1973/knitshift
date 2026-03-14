@@ -1,5 +1,6 @@
 import { usePatternStore } from "../../hooks/usePatternStore";
 import { GARMENT_TYPES, getDefaultMeasurements } from "../../data/garmentTemplates";
+import PdfDropZone from "./PdfDropZone";
 import GaugeSection from "./GaugeSection";
 import MeasurementsSection from "./MeasurementsSection";
 import ShapingSection from "./ShapingSection";
@@ -27,6 +28,9 @@ export default function PatternForm({ onGenerate }) {
 
   return (
     <div className="space-y-6">
+      {/* PDF Import */}
+      <PdfDropZone />
+
       {/* Pattern Name */}
       <section className="bg-white rounded-lg border border-knit-200 p-5">
         <label className="block text-sm font-medium text-machine-700 mb-1">
