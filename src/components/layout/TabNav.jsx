@@ -2,6 +2,7 @@ const TABS = [
   { key: "input", label: "Pattern Input" },
   { key: "output", label: "Machine Pattern" },
   { key: "catalogue", label: "My Patterns" },
+  { key: "settings", label: "Settings" },
 ];
 
 export default function TabNav({ activeTab, onTabChange }) {

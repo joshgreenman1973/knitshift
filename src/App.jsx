@@ -3,6 +3,7 @@ import AppShell from "./components/layout/AppShell";
 import PatternForm from "./components/input/PatternForm";
 import PatternOutput from "./components/output/PatternOutput";
 import PatternList from "./components/catalogue/PatternList";
+import ApiKeySettings from "./components/settings/ApiKeySettings";
 
 function App() {
   const [activeTab, setActiveTab] = useState("input");
@@ -16,6 +17,7 @@ function App() {
       {activeTab === "catalogue" && (
         <PatternList onLoadPattern={() => setActiveTab("input")} />
       )}
+      {activeTab === "settings" && <ApiKeySettings />}
     </AppShell>
   );
 }
